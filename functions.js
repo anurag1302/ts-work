@@ -27,3 +27,11 @@ console.log(subtract1(4, 3, 9));
 console.log(multiply1(4, 3, [1, 2, 3]));
 console.log(multiply2(4, 3, ...[1, 2, 3]));
 console.log(multiply2(4, 3, 1, 2, 3));
+//generic functions
+function concat(items1, items2) {
+    return items1.concat(items2);
+}
+let items1 = ['a', 'b', 'c', 'd', 'e'];
+let items2 = ['1', '2', '3'];
+let concatStr = concat(items1, items2);
+console.log(concatStr);
