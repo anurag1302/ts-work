@@ -1,4 +1,7 @@
-class Employee {
+import { User, Login } from './interface'
+
+//Interface is implemented
+class Employee implements Login {
     //either write ! after the properties or init them in a constructor
     id: number;
     name: string;
@@ -10,6 +13,9 @@ class Employee {
         this.name = name;
         this.dob = dob
     }
+    Login(): User {
+        return { id: 101, name: 'Test', age: 21, city: 'GGN' }
+    }
 
     //methods
     concatIdAndName() {
@@ -18,6 +24,7 @@ class Employee {
 }
 
 //inheritance
+//Class is extended
 class Manager extends Employee {
     department: string;
     address: string;
@@ -29,8 +36,7 @@ class Manager extends Employee {
         this.address = address;
     }
 
-    getDetails()
-    {
+    getDetails() {
         return `${this.name} is a manager, whose ID is ${this.id}, his department is ${this.department}`;
     }
 }
@@ -42,9 +48,11 @@ let man1 = new Manager(101, 'John', new Date(), 'IT', 'Delhi');
 console.log(emp1)
 
 console.log(emp1.concatIdAndName())
+console.log(emp1.Login())
 
 console.log(man1)
 
 console.log(man1.concatIdAndName())
 
 console.log(man1.getDetails())
+console.log(man1.Login())
