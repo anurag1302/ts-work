@@ -48,6 +48,7 @@ let man1 = new Manager(101, 'John', new Date(), 'IT', 'Delhi');
 console.log(emp1)
 
 console.log(emp1.concatIdAndName())
+
 console.log(emp1.Login())
 
 console.log(man1)
@@ -55,4 +56,5 @@ console.log(man1)
 console.log(man1.concatIdAndName())
 
 console.log(man1.getDetails())
+
 console.log(man1.Login())
