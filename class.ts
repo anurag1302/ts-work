@@ -17,11 +17,13 @@ class Employee {
     }
 }
 
+//inheritance
 class Manager extends Employee {
     department: string;
     address: string;
 
     constructor(id: number, name: string, dob: Date, dept: string, address: string) {
+        //while inherting, super needs to be called that will call the base constructor
         super(id, name, dob);
         this.department = dept;
         this.address = address;
